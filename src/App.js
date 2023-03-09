@@ -5,6 +5,7 @@ function App() {
     <div className="App">
       Saquib
       Srijita
+      Anjana
     </div>
   );
 }
