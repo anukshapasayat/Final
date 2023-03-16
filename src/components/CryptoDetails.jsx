@@ -28,11 +28,11 @@ const CryptoDetails = () => {
   const { coinId } = useParams();
   const [timeperiod, setTimeperiod] = useState("7d");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
-  const { data: coinHistory } = useGetCryptoHistoryQuery({coinId, timeperiod});
+  const { data: coinHistory } = useGetCryptoHistoryQuery({coinId,timeperiod});
   const cryptoDetails = data?.data?.coin;
   console.log(data);
   console.log(coinHistory);
-  
+
   // const CryptoHistory = () => {
   //   const [timeperiod, setTimeperiod] = useState("7d");
   //   const { data: coinHistory } = useGetCryptoHistoryQuery(coinId, timeperiod);
@@ -42,7 +42,7 @@ const CryptoDetails = () => {
 
   if (isFetching) return <Loader />;
 
-  const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
+  const time = ["3h", "24h", "7d", "30d", "3m", "1y", "3y", "5y"];
 
   const stats = [
     {

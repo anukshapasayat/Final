@@ -9,22 +9,18 @@ const { Title } = Typography;
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
-  const coinTimestamp = [];
+  const coinTimeStamp = [];
 
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
-    coinPrice.push(coinHistory?.data?.history[i].price);
-  }
+    coinPrice.push(coinHistory?.data?.history[i]?.price);
+    coinTimeStamp.push(new Date(coinHistory?.data?.history[i]?.timestamp*1000).toLocaleDateString());
+  };
 
-  for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
-    coinTimestamp.push(
-      new Date(coinHistory?.data?.history[i].timestamp).toLocaleDateString()
-    );
-  }
   const data = {
-    labels: coinTimestamp,
+    labels: coinTimeStamp,
     datasets: [
       {
-        label: "Price In USD",
+        label: "Price in USD",
         data: coinPrice,
         fill: false,
         backgroundColor: "#0071bd",
