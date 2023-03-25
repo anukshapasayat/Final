@@ -35,6 +35,7 @@ a:hover{
 .routes{
     padding: 20px;
 }
+
 .nav-container{
     position: fixed;
     left: 0;
@@ -52,7 +53,10 @@ a:hover{
     width: 100%;
 }
 .logo{
-    margin:0 0 0 15px;
+    /* margin:0 0 0 15px; */
+    margin-left: 15px;
+    margin-top: 10px;
+    
 }
 .logo a{
    color: white;
