@@ -51,18 +51,12 @@ const Homepage = () => {
         <Title className="home-title" level={2}>
           Top Cryptocurrencies in the World
         </Title>
-        {/* <Title className="show-more" level={3}>
-          <Link to="/cryptocurrencies">Show More</Link>
-        </Title> */}
       </div>
       <Cryptocurrencies simplified/>
       <div className="home-heading-container">
         <Title className="home-title" level={2}>
           Latest Crypto News
         </Title>
-        {/* <Title className="show-more" level={3}>
-          <Link to="/news">Show More</Link>
-        </Title> */}
       </div>
       <News simplified/>
     </>
